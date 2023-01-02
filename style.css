@@ -1,7 +1,43 @@
 body {
-    background: linear-gradient(to right, rgb(29, 136, 207), rgb(110, 25, 143));
+    background: linear-gradient(to right, rgb(56, 36, 170), rgb(146, 11, 135));
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     color: #fff;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1.5em;
+    border-radius: 10px;
+}
+
+button {
+    background-color: rgb(95, 53, 211);
+    color: #fff;
+    border: none;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px black;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(161, 19, 114);
+    
+}
+
+.stepone, .steptwo {
+    display: none;       
+}
+
+input {
+    border-radius: 5px;
+    padding: 5px;
+    outline: none;
 }
 
