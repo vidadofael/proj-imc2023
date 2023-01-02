@@ -16,9 +16,8 @@
     <div class="container">
         <div class="stepone">
             <p>Clique em iniciar para calcular seu IMC</p>
-            <button>Iniciar</button>
+            <button onclick="go(1,2)">Iniciar</button>
         </div>
-
         <div class="steptwo">
             <h3>Calculadora IMC</h3>
             <hr>
@@ -29,9 +28,7 @@
             <label for="">Digite sua altura:</label>
             <input type="number" placeholder="sua altura" id="altura">
             <br><br>
-            <button>Calcular</button>
-            
-
+            <button onclick="valicacaoCampo()">Calcular</button> 
         </div>
         <div class="stepfinal">
             <h3>Rsultado!</h3>
@@ -40,9 +37,70 @@
             <button>Finalizar</button>
         </div>
     </div>
-
-
-
 </body>
+<script type="text/javascript">
+    const firstDiv = document.querySelector('.stepone');
+    const secondtDiv = document.querySelector('.steptwo');
+    const finaltDiv = document.querySelector('.stepfinal');
 
+    function go(currentStep,nextStep)
+    {
+        let dNone, dBlock;
+        if(currentStep == 1)
+        {
+            dNone = firstDiv;
+        }
+        else if (currentStep == 2) 
+        {
+            dNone = secondtDiv;
+        }
+        else
+        {
+            dNone = finaltDiv;
+        }
+        dNone.style.display = 'none';
+    
+
+    
+        if(nextStep == 1)
+        {
+            dBlock = firstDiv;
+        }
+        else if (nextStep == 2) 
+        {
+            dBlock = secondtDiv;
+        }
+        else
+        {
+            dBlock = finaltDiv;
+        }
+        dBlock.style.display = 'block';
+    }
+
+    function valicacaoCampo()
+    {
+        const peso = document.getElementById('peso');
+        const altura = document.getElementById('altura');
+        if(!peso.value || !altura.value)
+        {
+            if(!peso.value && ! altura.value)
+            {
+                console.log('Não temos registro de peso e altura!');
+            }
+            else if(!peso.value)
+            {
+                console.log('Não temos registro de peso.');
+            }
+            else
+            {
+                console.log('Não temos registro de altura.')
+            }
+
+        }
+        else
+        {
+            console.log('tudo ok! Calcular...')
+        }
+    }
+</script>
 </html>

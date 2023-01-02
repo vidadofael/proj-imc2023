@@ -31,7 +31,8 @@ button:hover {
     
 }
 
-.stepone, .steptwo {
+.steptwo,
+.stepfinal {
     display: none;       
 }
 
